@@ -1,0 +1,79 @@
+TEMPERATURE CONTROLLED FAN USING ARDUINO UNO
+Abstract:
+A Temperature Controlled Fan is an automatic cooling system that adjusts the speed of a DC fan based on the surrounding temperature. The project uses an Arduino Uno microcontroller, an LM35 temperature sensor, and an L293D motor driver. The LM35 continuously measures the ambient temperature and sends the data to the Arduino. According to the measured temperature, the Arduino controls the fan speed using PWM (Pulse Width Modulation). This system reduces power consumption, improves cooling efficiency, and eliminates the need for manual fan control. It is suitable for homes, offices, computer cabinets, laboratories, and industrial environments.
+Chapter 1: Introduction
+Temperature control is important in homes, industries, and electronic equipment. Conventional fans run at a constant speed even when cooling is not required, resulting in unnecessary energy consumption.
+This project automatically controls the fan speed according to the room temperature. When the temperature rises, the fan rotates faster. When the temperature decreases, the fan slows down or stops.
+The project is simple, low-cost, energy-efficient, and easy to implement using Arduino technology.
+Chapter 2: Problem Statement
+Traditional fans require manual adjustment, leading to:
+Increased electricity consumption
+User inconvenience
+Inefficient cooling
+Continuous operation even at low temperatures
+The proposed system overcomes these problems by automatically controlling the fan speed.
+Chapter 3: Objectives
+Measure room temperature accurately.
+Automatically control fan speed.
+Reduce electricity consumption.
+Increase user comfort.
+Build a low-cost smart cooling system.
+Chapter 4: Components Required
+Component
+Quantity
+Arduino Uno R3
+1
+LM35 Temperature Sensor
+1
+L293D Motor Driver IC
+1
+DC Motor (Fan)
+1
+Breadboard
+1
+Jumper Wires
+As required
+5V Power Supply
+1
+Chapter 5: Hardware Description
+Arduino Uno
+Arduino Uno is the main controller. It reads temperature from the LM35 sensor and controls the fan speed.
+Specifications:
+Operating Voltage: 5V
+Digital Pins: 14
+Analog Pins: 6
+Flash Memory: 32 KB
+LM35 Temperature Sensor
+The LM35 measures temperature in degrees Celsius.
+Features:
+Output: 10 mV per °C
+Operating Voltage: 4V–30V
+Accuracy: ±0.5°C
+L293D Motor Driver
+The L293D is used because Arduino cannot directly drive a DC motor.
+Functions:
+Drives DC motors
+Protects Arduino
+Supports PWM speed control
+DC Fan
+The DC fan provides cooling. Its speed changes automatically depending on the temperature.
+Chapter 6: Circuit Connections
+LM35
+VCC → Arduino 5V
+GND → Arduino GND
+OUT → Arduino A0
+L293D
+IN1 → Arduino D9 (PWM)
+VCC1 → 5V
+VCC2 → Motor Supply
+GND → Ground
+DC Motor
+Connected to L293D output pins.
+Chapter 7: Working Principle
+LM35 measures room temperature.
+Arduino converts analog voltage into temperature.
+Temperature is compared with preset limits.
+Arduino generates PWM signals.
+L293D drives the motor.
+Fan speed increases as temperature increases.
+When the temperature becomes low, the fan slows down.
