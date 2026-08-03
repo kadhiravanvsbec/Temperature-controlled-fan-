@@ -1,0 +1,31 @@
+                START
+                   │
+                   ▼
+         Initialize Arduino
+                   │
+                   ▼
+      Read LM35 Temperature Sensor
+                   │
+                   ▼
+     Convert Analog Value to °C
+                   │
+                   ▼
+        Is Temperature < 25°C?
+           ┌────────┴────────┐
+          Yes               No
+           │                 │
+           ▼                 ▼
+      Fan OFF          Is Temperature < 30°C?
+                           ┌──────┴──────┐
+                          Yes           No
+                           │             │
+                           ▼             ▼
+                     Fan Low Speed   Is Temperature < 35°C?
+                                        ┌──────┴──────┐
+                                       Yes           No
+                                        │             │
+                                        ▼             ▼
+                                  Fan Medium     Fan Full Speed
+                                        │
+                                        ▼
+                                  Repeat Process
