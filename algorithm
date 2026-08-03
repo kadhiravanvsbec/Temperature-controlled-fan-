@@ -1,0 +1,10 @@
+Start the system.
+Initialize Arduino pins.
+Read the temperature from the LM35 sensor.
+Convert the sensor output into Celsius.
+Compare the temperature with preset values.
+If temperature is below 25°C, turn the fan OFF.
+If temperature is between 25°C and 30°C, run the fan at low speed.
+If temperature is between 30°C and 35°C, run the fan at medium speed.
+If temperature is above 35°C, run the fan at full speed.
+Repeat continuously.
