@@ -1,0 +1,6 @@
+analogRead(A0) reads the voltage from the LM35 sensor.
+The voltage is converted into temperature using:
+temperature = voltage * 100;
+The Arduino compares the temperature with preset limits.
+analogWrite() generates a PWM signal to control the motor speed.
+The process repeats every second.
